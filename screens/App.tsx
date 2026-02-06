@@ -20,8 +20,8 @@ async function sendPushNotification(expoPushToken: string) {
   const message = {
     to: expoPushToken,
     sound: 'default',
-    title: 'Hawaz',
-    body: 'Hawaz is guy',
+    title: 'Heaven',
+    body: '2 new soul came',
     data: { someData: 'goes here' },
   };
 
