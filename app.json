@@ -1,10 +1,15 @@
 {
   "expo": {
-    "name": "myapi",
+    "name": "HEAVEN",
     "slug": "myapi",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/logo.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#6808b8"
+    },
+    "icon": "./assets/images/logo.png",
     "scheme": "myapi",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -12,6 +17,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.tech.Heaven",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -30,19 +37,34 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/logo.png",
           "imageWidth": 200,
-          "resizeMode": "contain",
+          "resizeMode": "cover",
           "backgroundColor": "#ffffff",
           "dark": {
             "backgroundColor": "#000000"
           }
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/logo.png",
+          "color": "#E6F4FE",
+          "androidMode": "default",
+          "androidCollapsedTitle": "New notification"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c704cee8-f13d-4ea4-87b4-5eca75430049"
+      }
     }
   }
 }

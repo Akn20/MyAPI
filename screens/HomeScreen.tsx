@@ -12,6 +12,7 @@ const HomeScreen = ({ navigation }: any) => (
       <AppButton title="About" onPress={() => {}} />
       <AppButton title="Dog Image" onPress={() => navigation.navigate('DogImage')} />
         <AppButton title="Movie" onPress={() => navigation.navigate('Movie')} />
+          <AppButton title="Notification" onPress={() =>navigation.navigate('App')} />
 
       <AppButton title="Logout" onPress={() => navigation.replace('Login')} />
     </View>

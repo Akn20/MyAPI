@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1070756415302",
+    "project_id": "heaven-ca87e",
+    "storage_bucket": "heaven-ca87e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070756415302:android:4da7a36ec355a29bcb8747",
+        "android_client_info": {
+          "package_name": "com.tech.Heaven"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqZVGGY5L9lqbM5NVzDNn_8IeRt_uznks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

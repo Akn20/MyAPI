@@ -15,7 +15,7 @@ const MovieScreen = () => {
         return;
       }
 
-      // 1️⃣ Search movie
+    
       const results = await searchMovie(movieName);
 
       if (!results || results.length === 0) {
@@ -23,10 +23,22 @@ const MovieScreen = () => {
         return;
       }
 
-      // 2️⃣ Extract IMDb ID (remove "/title/")
-      const imdbId = results[0].id.replace('/title/', '').replace('/', '');
+      
+      const rawId = results[0].id || results[0].id.title || results[0].title || '';
+      const extractImdbId = (s: string) => {
+        if (!s) return null;
+        const m = s.match(/tt\d+/);
+        if (m) return m[0];
+        return s.replace('/title/', '').replace(/\//g, '');
+      };
 
-      // 3️⃣ Fetch ratings
+      const imdbId = extractImdbId(rawId);
+      if (!imdbId) {
+        Alert.alert('Could not determine IMDb ID for selected result');
+        return;
+      }
+
+  
       const ratingData = await getMovieRatings(imdbId);
       setRatings(ratingData);
 

@@ -1,3 +1,4 @@
+/*
 import { useEffect } from 'react';
 import { Text, View } from 'react-native';
 import styles from '../styles/appStyles';
@@ -16,3 +17,4 @@ const SplashScreen = ({ navigation }: any) => {
 };
 
 export default SplashScreen;
+*/
